@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+backend/
+prisma/
+migrated_prompt_history/
+.DS_Store
