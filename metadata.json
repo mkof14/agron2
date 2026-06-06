@@ -1,0 +1,9 @@
+{
+  "name": "AGRON",
+  "description": "AGRON – Aerial–Ground Robotics Operations Network. National-scale infrastructure for autonomous systems.",
+  "requestFramePermissions": [
+    "camera",
+    "geolocation"
+  ],
+  "majorCapabilities": []
+}

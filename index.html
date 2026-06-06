@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="AGRON controls how drone work gets executed across locations, operators, missions, data, and delivery." />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#020617" />
+    <link rel="canonical" href="https://www.agron1.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="AGRON" />
+    <meta property="og:title" content="AGRON | Controlling Execution in Drone Operations" />
+    <meta property="og:description" content="AGRON controls how drone work gets executed across locations, operators, missions, data, and delivery." />
+    <meta property="og:url" content="https://www.agron1.com/" />
+    <meta property="og:image" content="https://www.agron1.com/presentations/agron-hero-clean.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AGRON | Controlling Execution in Drone Operations" />
+    <meta name="twitter:description" content="AGRON controls how drone work gets executed across locations, operators, missions, data, and delivery." />
+    <meta name="twitter:image" content="https://www.agron1.com/presentations/agron-hero-clean.jpg" />
+    <title>AGRON | Controlling Execution in Drone Operations</title>
+    <link rel="preload" as="image" href="/presentations/agron-hero-clean.jpg" fetchpriority="high" />
+    <link rel="preload" as="image" href="/brand/agron-logo.png" />
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+            },
+            colors: {
+              agron: {
+                50: '#f8fafc',
+                100: '#f1f5f9',
+                200: '#e2e8f0',
+                300: '#cbd5e1',
+                400: '#94a3b8',
+                500: '#64748b',
+                600: '#475569',
+                700: '#334155',
+                800: '#1e293b',
+                900: '#0f172a',
+                950: '#020617',
+                blue: {
+                  DEFAULT: '#3b82f6',
+                  soft: '#60a5fa',
+                  deep: '#1d4ed8',
+                  night: '#1e3a8a',
+                  cyan: '#06b6d4',
+                },
+                accent: {
+                  DEFAULT: '#f59e0b',
+                  soft: '#fbbf24',
+                  glow: '#fbbf2433',
+                  electric: '#10b981', // Circuit Green
+                  crimson: '#ef4444', // Pulse Red
+                }
+              }
+            },
+            boxShadow: {
+              'soft-xl': '0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05)',
+              'soft-2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.1)',
+              'soft-3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.15)',
+              'inner-glow': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.05)',
+              'inner-glow-white': 'inset 0 1px 1px 0 rgba(255, 255, 255, 0.8)',
+              'accent-glow': '0 0 30px rgba(245, 158, 11, 0.2)',
+              'blue-glow': '0 20px 40px -15px rgba(59, 130, 246, 0.4)',
+              'green-glow': '0 20px 40px -15px rgba(16, 185, 129, 0.4)',
+              'red-glow': '0 20px 40px -15px rgba(239, 68, 68, 0.4)',
+            },
+            backgroundImage: {
+              'grid-pattern': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%233b82f6' fill-opacity='0.05'/%3E%3C/svg%3E\")",
+              'grid-pattern-dark': "url(\"data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm1 1h38v38H1V1z' fill='%233b82f6' fill-opacity='0.02'/%3E%3C/svg%3E\")",
+              'shimmer': 'linear-gradient(90deg, transparent, rgba(255,255,255,0.03), transparent)',
+              'radial-vibe': 'radial-gradient(circle at 50% 50%, var(--tw-gradient-from) 0%, transparent 70%)',
+            }
+          },
+        },
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+      :root {
+        --theme-bg: #ffffff;
+        --theme-text: #0f172a;
+        --theme-border: #e2e8f0;
+        --theme-surface: #ffffff;
+        --accent-glow: rgba(59, 130, 246, 0.1);
+      }
+
+      .dark {
+        --theme-bg: #030712;
+        --theme-text: #f8fafc;
+        --theme-border: #1e293b;
+        --theme-surface: #0f172a;
+        --accent-glow: rgba(59, 130, 246, 0.05);
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--theme-bg);
+        color: var(--theme-text);
+        overflow-x: hidden;
+      }
+
+      .glass {
+        background: rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .dark .glass {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .noise-bg {
+        position: relative;
+      }
+      
+      .noise-bg::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        opacity: 0.03;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        pointer-events: none;
+      }
+
+      .light-depth {
+        background: radial-gradient(circle at 0% 0%, #ffffff 0%, #f1f5f9 50%, #e2e8f0 100%);
+        background-attachment: fixed;
+      }
+      
+      .light-depth::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: 
+          radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.05) 1px, transparent 0);
+        background-size: 32px 32px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .dark-depth {
+        background: radial-gradient(circle at 50% 0%, #030712 0%, #000000 100%);
+      }
+      
+      .dark-depth::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-image: 
+          radial-gradient(circle at 1px 1px, rgba(59, 130, 246, 0.03) 1px, transparent 0);
+        background-size: 32px 32px;
+        pointer-events: none;
+        z-index: -1;
+      }
+
+      .shadow-float {
+        box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+      }
+
+      .dark .shadow-float {
+        box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.6);
+      }
+
+      ::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: var(--theme-bg); 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: var(--theme-border); 
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #3b82f6; 
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-15px); }
+      }
+
+      @keyframes pulse-glow {
+        0%, 100% { filter: drop-shadow(0 0 10px rgba(59, 130, 246, 0.4)); }
+        50% { filter: drop-shadow(0 0 25px rgba(59, 130, 246, 0.7)); }
+      }
+
+      @keyframes draw {
+        to { stroke-dashoffset: 0; }
+      }
+
+      .animate-float {
+        animation: float 5s ease-in-out infinite;
+      }
+
+      .animate-pulse-glow {
+        animation: pulse-glow 3s ease-in-out infinite;
+      }
+
+      .glow-text {
+        text-shadow: 0 0 15px currentColor;
+      }
+
+      /* Custom transitions */
+      .page-transition-enter { opacity: 0; transform: translateY(10px); }
+      .page-transition-enter-active { opacity: 1; transform: translateY(0); transition: all 400ms ease-out; }
+      .page-transition-exit { opacity: 1; transform: translateY(0); }
+      .page-transition-exit-active { opacity: 0; transform: translateY(-10px); transition: all 400ms ease-in; }
+
+      .presentation-input {
+        width: 100%;
+        border-radius: 1rem;
+        border: 1px solid var(--theme-border);
+        background: var(--theme-surface);
+        color: var(--theme-text);
+        padding: 0.85rem 1rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        outline: none;
+      }
+
+      .presentation-input:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.16);
+      }
+
+      .presentation-input::placeholder {
+        color: #94a3b8;
+      }
+    </style>
+</head>
+  <body class="bg-f8fafc dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div id="root"></div>
+    <!-- Explicit entry point for Vite/Vercel build pipeline -->
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
